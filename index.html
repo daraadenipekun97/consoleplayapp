@@ -11,6 +11,7 @@
     <button onclick="authenticate().then(loadClient)">authorize and load</button>
 <button onclick="execute()">execute</button>
 <button onclick="alert()">Test</button>
+<p>Live Reload</p>
     
     <script src="https://apis.google.com/js/api.js"></script>
 <script>
@@ -32,7 +33,7 @@
               function(err) { console.error("Error signing in", err); });
   }
   function loadClient() {
-    gapi.client.setApiKey("AIzaSyBJo0c4K383xbHs9FpTAtTpEoPSYTOOepU");
+    gapi.client.setApiKey("AIzaSyATBAt8UzH9Xuc8iFWLnCs5W-mj9EAQnG0");
     return gapi.client.load("https://androidpublisher.googleapis.com/$discovery/rest?version=v3")
         .then(function() { console.log("GAPI client loaded for API"); },
               function(err) { console.error("Error loading GAPI client for API", err); });
@@ -47,7 +48,7 @@
               function(err) { console.error("Execute error", err); });
   }
   gapi.load("client:auth2", function() {
-    gapi.auth2.init({client_id: "218460719300-63552fel8nar47tlasmpa3brlf257b9s.apps.googleusercontent.com"});
+    gapi.auth2.init({client_id: "286639000577-4bl5vv7jqv0bfm2h6bjrdmotkej2rujr.apps.googleusercontent.com"});
   });
 </script>
 
