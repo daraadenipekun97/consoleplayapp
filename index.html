@@ -40,7 +40,11 @@
   }
   // Make sure the client is loaded and sign-in is complete before calling this method.
   function execute() {
-    return gapi.client.androidpublisher.purchases.products.get({})
+    return gapi.client.androidpublisher.purchases.subscriptions.get({
+      "packageName": "com.libribooks",
+      "subscriptionId": "lone_ranger_monthly",
+      "token": "9meid9834934"
+    })
         .then(function(response) {
                 // Handle the results here (response.result has the parsed body).
                 console.log("Response", response);
